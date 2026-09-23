@@ -1,4 +1,4 @@
-# AI-Powered Real Estate Acquisition System — Architecture Reconstruction
+# AI Powered Real Estate Acquisition System, Architecture Reconstruction
 
 > ⚠️ **Read [DISCLAIMER.md](./DISCLAIMER.md) first.** This is a sanitized, synthetic-data reconstruction of a real 2025 client engagement — not the original production code. See [docs/production-vs-reconstruction.md](./docs/production-vs-reconstruction.md) for exactly what's confirmed, inferred, or intentionally omitted.
 
