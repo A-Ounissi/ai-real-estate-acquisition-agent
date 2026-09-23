@@ -1,0 +1,40 @@
+{
+  "_notice": "SYNTHETIC DATA — fabricated names, phone numbers, and situations for demonstration only. No real homeowner information appears in this file.",
+  "homeowners": [
+    {
+      "homeowner_id": "OWN-0001",
+      "property_id": "SYN-0001",
+      "name": "Carol Denniston",
+      "phone": "555-0101-0001",
+      "situation_notes": "Synthetic: recently widowed, mentioned difficulty keeping up with mortgage payments alone."
+    },
+    {
+      "homeowner_id": "OWN-0002",
+      "property_id": "SYN-0002",
+      "name": "Marcus Fell",
+      "phone": "555-0101-0002",
+      "situation_notes": "Synthetic: job loss six months prior, behind on payments, considering options."
+    },
+    {
+      "homeowner_id": "OWN-0003",
+      "property_id": "SYN-0003",
+      "name": "Denise Okafor",
+      "phone": "555-0101-0003",
+      "situation_notes": "Synthetic: property inherited from a relative, owner lives out of state, low urgency."
+    },
+    {
+      "homeowner_id": "OWN-0004",
+      "property_id": "SYN-0004",
+      "name": "Ray and Patty Solum",
+      "phone": "555-0101-0004",
+      "situation_notes": "Synthetic: medical expenses cited as reason for falling behind, notice of default filed."
+    },
+    {
+      "homeowner_id": "OWN-0005",
+      "property_id": "SYN-0005",
+      "name": "Tomas Reyes",
+      "phone": "555-0101-0005",
+      "situation_notes": "Synthetic: no distress signal, mortgage current, unlikely to be interested."
+    }
+  ]
+}

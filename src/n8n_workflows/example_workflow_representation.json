@@ -1,0 +1,72 @@
+{
+  "_notice": "ILLUSTRATIVE ONLY — a representative, simplified stand-in for the shape of the production n8n workflows. This is NOT an export of the client's actual n8n workflows, and contains no real credentials, node configurations, or business logic.",
+  "workflow_name": "example-property-processing (illustrative)",
+  "description": "Represents the pattern of the production system: multiple discrete workflows chained by triggers, rather than one monolithic workflow.",
+  "workflows_overview": [
+    {
+      "name": "1. Batch Ingestion",
+      "trigger": "Google Drive - new file",
+      "responsibility": "Detect new Zillow batch file, parse rows, hand off property records to the next workflow.",
+      "status": "confirmed to exist; internal node config is illustrative"
+    },
+    {
+      "name": "2. Duplicate Check",
+      "trigger": "Called by Batch Ingestion workflow",
+      "responsibility": "Check each property against persistence layer (Supabase) to skip already-processed properties.",
+      "status": "confirmed to exist; internal node config is illustrative"
+    },
+    {
+      "name": "3. Qualification & Filtering",
+      "trigger": "Called by Duplicate Check workflow",
+      "responsibility": "Apply pre-filter rules, run criteria analysis, classify Qualified / Not Qualified.",
+      "status": "confirmed to exist; exact criteria not recalled/reconstructed"
+    },
+    {
+      "name": "4. Offer Calculation",
+      "trigger": "Called for Qualified properties",
+      "responsibility": "Run deterministic JavaScript calculation node to generate two offers.",
+      "status": "confirmed to exist; exact formula not recalled/reconstructed"
+    },
+    {
+      "name": "5. Report Generation",
+      "trigger": "Called after offer calculation",
+      "responsibility": "Generate Google Docs/PDF report with property, analysis, and offer details.",
+      "status": "confirmed to exist; exact template not recalled"
+    },
+    {
+      "name": "6. Retell Call Initiation",
+      "trigger": "Called after report generation",
+      "responsibility": "Trigger Retell AI outbound call with property/offer context.",
+      "status": "confirmed to exist"
+    },
+    {
+      "name": "7. Call Outcome Handling",
+      "trigger": "Webhook from Retell AI on call completion",
+      "responsibility": "Receive transcript, analyze outcome, branch to appointment scheduling or rejection capture.",
+      "status": "confirmed to exist"
+    },
+    {
+      "name": "8. RAG Knowledge Ingestion",
+      "trigger": "Called after Call Outcome Handling",
+      "responsibility": "Chunk and embed transcript/summary, upsert into knowledge base for future retrieval.",
+      "status": "confirmed loop existed; exact ingestion mechanism inferred"
+    },
+    {
+      "name": "9. Notification",
+      "trigger": "Called after Report Generation / Call Outcome Handling",
+      "responsibility": "Email client with generated report and result summary.",
+      "status": "confirmed to exist"
+    },
+    {
+      "name": "Supporting integrations",
+      "trigger": "Various",
+      "responsibility": "Make.com present somewhere in this layer — exact responsibility not fully recalled.",
+      "status": "presence confirmed; role not reconstructed"
+    }
+  ],
+  "example_node_snippet": {
+    "node_type": "Function (JavaScript)",
+    "purpose": "Illustrative stand-in for the deterministic offer-calculation node",
+    "code_reference": "See src/offer_calculation/example_offer_calculator.js — same synthetic logic, adapted for an n8n Function node context."
+  }
+}

@@ -1,0 +1,28 @@
+# Qualification & Offer Workflow (Reconstructed)
+
+This diagram illustrates the qualification-to-offer stage of the pipeline. The branching logic and stage order are confirmed; the specific criteria and formulas inside each box are synthetic/illustrative — see [production-vs-reconstruction.md](../production-vs-reconstruction.md).
+
+```mermaid
+flowchart TD
+    A[New property batch from Google Drive] --> B[Extract property records]
+    B --> C{Already processed?<br/>Duplicate check against Supabase}
+    C -- Yes --> D[Skip / log as duplicate]
+    C -- No --> E[Apply pre-filter rules<br/>synthetic example]
+    E --> F{Passes filter?}
+    F -- No --> G[Store: Not Qualified<br/>reason: filtered out]
+    F -- Yes --> H[LLM analysis vs acquisition criteria<br/>synthetic example criteria]
+    H --> I{Qualified?}
+    I -- No --> J[Store: Not Qualified<br/>reason: criteria not met]
+    I -- Yes --> K[Deterministic JS calculation<br/>ILLUSTRATIVE formula only]
+    K --> L[Generate Offer A]
+    K --> M[Generate Offer B]
+    L --> N[Store property + offers in Supabase]
+    M --> N
+    N --> O[Generate property report]
+    O --> P[Send to calling workflow]
+```
+
+**Notes:**
+- The pre-filter step exists to reduce cost by eliminating obviously non-viable properties before invoking the LLM — this is a common and reasonable pattern, not a confirmed implementation detail.
+- The "two offers" step is confirmed to have existed; the specific offer types and how they differ are not recalled.
+- The calculation box explicitly uses a labeled synthetic formula in the code — see `src/offer_calculation/example_offer_calculator.js`.

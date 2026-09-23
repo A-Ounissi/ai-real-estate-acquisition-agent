@@ -1,0 +1,112 @@
+{
+  "_notice": "SYNTHETIC DATA — fabricated for portfolio demonstration only. Not real Zillow data, not real properties, not derived from any client dataset.",
+  "batch_id": "demo-batch-0001",
+  "source": "synthetic (illustrative of Zillow API-style fields)",
+  "properties": [
+    {
+      "property_id": "SYN-0001",
+      "address": {
+        "street": "412 Maple Hollow Dr",
+        "city": "Greensdale",
+        "state": "OH",
+        "zip": "44115"
+      },
+      "estimated_value": 168000,
+      "last_sale_price": 142000,
+      "last_sale_date": "2016-08-11",
+      "mortgage_status_signal": "pre-foreclosure filing (synthetic)",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_footage": 1450,
+      "year_built": 1978,
+      "owner_occupied": true,
+      "days_on_market": null,
+      "tax_delinquent": false,
+      "listing_status": "off-market"
+    },
+    {
+      "property_id": "SYN-0002",
+      "address": {
+        "street": "88 Cobalt Ridge Ln",
+        "city": "Fairmont Park",
+        "state": "TX",
+        "zip": "75212"
+      },
+      "estimated_value": 221500,
+      "last_sale_price": 198000,
+      "last_sale_date": "2019-02-03",
+      "mortgage_status_signal": "60+ days delinquent (synthetic)",
+      "bedrooms": 4,
+      "bathrooms": 2.5,
+      "square_footage": 2100,
+      "year_built": 1995,
+      "owner_occupied": true,
+      "days_on_market": null,
+      "tax_delinquent": true,
+      "listing_status": "off-market"
+    },
+    {
+      "property_id": "SYN-0003",
+      "address": {
+        "street": "27 Birchwood Ct",
+        "city": "Lakemont",
+        "state": "OH",
+        "zip": "44890"
+      },
+      "estimated_value": 134900,
+      "last_sale_price": 110000,
+      "last_sale_date": "2012-05-22",
+      "mortgage_status_signal": "none detected (synthetic)",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "square_footage": 980,
+      "year_built": 1965,
+      "owner_occupied": true,
+      "days_on_market": null,
+      "tax_delinquent": false,
+      "listing_status": "off-market"
+    },
+    {
+      "property_id": "SYN-0004",
+      "address": {
+        "street": "1590 Windmere Ave",
+        "city": "Dunston",
+        "state": "TX",
+        "zip": "75090"
+      },
+      "estimated_value": 254000,
+      "last_sale_price": 240000,
+      "last_sale_date": "2021-11-14",
+      "mortgage_status_signal": "90+ days delinquent, NOD filed (synthetic)",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "square_footage": 2450,
+      "year_built": 2004,
+      "owner_occupied": true,
+      "days_on_market": null,
+      "tax_delinquent": true,
+      "listing_status": "off-market"
+    },
+    {
+      "property_id": "SYN-0005",
+      "address": {
+        "street": "63 Thistledown Way",
+        "city": "Greensdale",
+        "state": "OH",
+        "zip": "44115"
+      },
+      "estimated_value": 99000,
+      "last_sale_price": 87000,
+      "last_sale_date": "2009-03-30",
+      "mortgage_status_signal": "current, no distress signal (synthetic)",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "square_footage": 890,
+      "year_built": 1958,
+      "owner_occupied": true,
+      "days_on_market": null,
+      "tax_delinquent": false,
+      "listing_status": "off-market"
+    }
+  ]
+}
