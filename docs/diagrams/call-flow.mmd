@@ -1,8 +1,3 @@
-# Voice Call Flow (Retell AI) — Reconstructed
-
-This reflects the confirmed structure of the outbound call: confirm property → present offer → determine outcome → branch. The dialogue itself is not the client's actual call script — see `src/retell_call_flow/example_call_flow.md` for a synthetic illustrative version.
-
-```mermaid
 flowchart TD
     A[Qualified property + offer ready] --> B[Retell AI places outbound call]
     B --> C{Call connected?}
@@ -23,8 +18,3 @@ flowchart TD
     O --> P[Store outcome in Supabase]
     P --> Q[Feed transcript + summary into RAG knowledge base]
     Q -.enriches future calls.-> H
-```
-
-**Notes:**
-- Retry logic for unconnected calls is confirmed to have existed; the specific retry count/backoff strategy is not recalled and is left generic here.
-- The RAG lookup step is confirmed conceptually (Retell was connected to a RAG system for real-time context); the retrieval mechanism itself is inferred, not confirmed — see `src/rag/example_rag_retrieval.md`.

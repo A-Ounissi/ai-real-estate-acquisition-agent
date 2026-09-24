@@ -1,8 +1,3 @@
-# Qualification & Offer Workflow (Reconstructed)
-
-This diagram illustrates the qualification-to-offer stage of the pipeline. The branching logic and stage order are confirmed; the specific criteria and formulas inside each box are synthetic/illustrative — see [production-vs-reconstruction.md](../production-vs-reconstruction.md).
-
-```mermaid
 flowchart TD
     A[New property batch from Google Drive] --> B[Extract property records]
     B --> C{Already processed?<br/>Duplicate check against Supabase}
@@ -20,9 +15,3 @@ flowchart TD
     M --> N
     N --> O[Generate property report]
     O --> P[Send to calling workflow]
-```
-
-**Notes:**
-- The pre-filter step exists to reduce cost by eliminating obviously non-viable properties before invoking the LLM — this is a common and reasonable pattern, not a confirmed implementation detail.
-- The "two offers" step is confirmed to have existed; the specific offer types and how they differ are not recalled.
-- The calculation box explicitly uses a labeled synthetic formula in the code — see `src/offer_calculation/example_offer_calculator.js`.

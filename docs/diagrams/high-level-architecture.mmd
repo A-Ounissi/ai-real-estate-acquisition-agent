@@ -1,0 +1,32 @@
+flowchart LR
+    subgraph INTAKE[Intake]
+        A[Property batches<br/>Google Drive] --> B[Extract property records]
+    end
+
+    subgraph QUAL[Qualification and offers]
+        C{Duplicate check} --> D[Pre-filter rules]
+        D --> E[LLM analysis vs criteria]
+        E --> F[Deterministic JS calculation]
+        F --> G[Generate Offer A and Offer B]
+        G --> H[Property report]
+    end
+
+    subgraph CALL[Outbound calling]
+        I[Retell AI outbound call] --> J[Homeowner conversation]
+        J --> K[Appointment scheduled<br/>or rejection reason captured]
+    end
+
+    subgraph LEARN[Storage and feedback]
+        L[(Supabase)]
+        M[Transcript analysis]
+        N[RAG knowledge base]
+    end
+
+    B --> C
+    C <--> L
+    G --> L
+    H --> I
+    N -.context during calls.-> J
+    K --> M
+    M --> L
+    M --> N
